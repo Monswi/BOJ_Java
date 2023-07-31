@@ -32,8 +32,9 @@ public class Main{
 		
 		for(int e=0;e<n;e++) {
 			for(int i=0;i<m;i++) {
-				System.out.println(C[e][i]);
+				System.out.printf("%d ",C[e][i]);
 			}
+			System.out.println("");
 		}
 	}
 	
