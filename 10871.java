@@ -9,15 +9,15 @@ public class Main {
 		A = new int [n];
 		
 		for(int i=0;i<n;i++) {
-		int a = sc.nextInt();
-		A[i]=a;
+			int a = sc.nextInt();
+			A[i]=a;
 		}
 		
 		for(int i=0;i<n;i++) {
 			int b = A[i];
-				if(b<x) {
+			if(b<x) {
 				System.out.println(b);
-				}
+			}
 		}
 	}
 }
