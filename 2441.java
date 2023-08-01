@@ -9,7 +9,7 @@ public class Main{
 		for(int i=0;i<a;i++) {
 			for(int e=0;e<i;e++) {
 				System.out.print(b);
-			} for(int e=0;e<5-i;e++) {
+			} for(int e=0;e<a-i;e++) {
 				System.out.print(s);
 			} System.out.println();
 		}
