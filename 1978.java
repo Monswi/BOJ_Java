@@ -9,15 +9,15 @@ public class Main {
 		for (int i = 0; i < n; i++) {
 			int a = sc.nextInt();
 			if (a < Math.sqrt(1000)) {
-				for (int j = 1; j < Math.sqrt(1000); j++) {
+				for (int j = 1; j <= a; j++) {
 					if (a % j == 0) {
-						arr[i] += 1;
+						arr[i] += 1;// answer2
 					}
 				}
 			} else {
-				for (int j = 1; j <= a; j++) {
+				for (int j = 1; j <= Math.sqrt(1000); j++) {
 					if (a % j == 0) {
-						arr[i] += 1;
+						arr[i] += 20;
 					}
 				}
 			}
@@ -25,7 +25,7 @@ public class Main {
 
 		int count = 0;
 		for (int i = 0; i < n; i++) {
-			if (arr[i] == 2) {
+			if (arr[i] == 2 || arr[i] == 20) {
 				count += 1;
 			}
 		}
