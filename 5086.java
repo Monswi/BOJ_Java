@@ -16,8 +16,6 @@ public class Main {
 			} else {
 				System.out.println("neither");
 			}
-			if (a == 0 && b == 0)
-				break;
 		}
 	}
 }
