@@ -1,3 +1,36 @@
+import java.util.Scanner;
+//수정후
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String word = sc.next();
+		int[] arr = new int[26];
+		
+		for (int i = 0; i < word.length(); i++) {
+			char c = word.charAt(i);
+			if(c-'A'>=0&&c-'Z'<=0) {
+				arr [c-'A']++;
+			}else {
+				arr[c-'a']++;
+			}
+		}
+		
+		int count = -1;
+		char max = '?';
+		for (int i = 0; i < 26; i++) {
+			if(count<arr[i]) {
+				count = arr[i];
+				max = (char) ('A'+i);
+			}else if(count == arr[i]) {
+				max = '?';
+			}
+		}
+		System.out.println(max);
+	}
+}
+
+
+//수정전
 import java.util.Arrays;
 import java.util.Scanner;
 
