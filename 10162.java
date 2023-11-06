@@ -1,19 +1,20 @@
-import java.util.*;
+import java.util.Scanner;
 public class Main{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        int sec = sc.nextInt();
+        int time = sc.nextInt();
 
-        if(sec%10!=0){
+        int a = time/300;
+        time%=300;
+        int b = time/60;
+        time%=60;
+        int c = time/10;
+        time%=10;
+        
+        if(time==0){
+            System.out.printf("%d %d %d\n",a,b,c);
+        }else{
             System.out.println("-1");
-        } else {
-            int a = sec / 300;
-            int b = (sec - (300 * a)) / 60;
-            int c = (sec - (300 * a) - (60 * b)) / 10;
-            
-            System.out.println(a);
-            System.out.println(b);
-            System.out.println(c);
         }
     }
 }
