@@ -1,0 +1,26 @@
+//2357
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int turn = sc.nextInt();
+        int [] arr = new int [num];
+
+        for(int i=0;i<num;i++){
+            int a = sc.nextInt();
+            arr[i] = a;
+        }
+
+        for(int i=0;i<turn;i++){
+            int first = sc.nextInt();
+            int fin = sc.nextInt();
+            int [] ans = new int [fin-first+1];
+            for(int j=0;j<fin-first+1;j++){
+                ans[j] = arr[j+first-1];
+            }
+            Arrays.sort(ans);
+            System.out.printf("%d %d\n",ans[0],ans[fin-first]);
+        }
+    }
+}
